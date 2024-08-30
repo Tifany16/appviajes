@@ -67,3 +67,31 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
     
+    // Navegación entre vistas principales
+    document.querySelectorAll(".arrow-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+            if (this.id === "prev-arrow" && currentViewIndex > 0) {
+                currentViewIndex--;
+            } else if (this.id === "next-arrow" && currentViewIndex < viewOrder.length - 1) {
+                currentViewIndex++;
+            }
+            updateMainView();
+        });
+    });
+
+    // Mostrar pantalla splash y luego el formulario de inicio de sesión
+    setTimeout(() => {
+        showView("loginForm");
+    }, 2000);
+
+    // Cambiar a formulario de registro
+    document.getElementById("create-account").addEventListener("click", function (event) {
+        event.preventDefault();
+        showView("registerForm");
+    });
+
+    // Volver al formulario de inicio de sesión desde el registro
+    document.getElementById("login-link").addEventListener("click", function (event) {
+        event.preventDefault();
+        showView("loginForm");
+    });
