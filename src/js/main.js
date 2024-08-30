@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
             updateRouteView();
         });
     }
-    
+
     // Navegación entre vistas principales
     document.querySelectorAll(".arrow-btn").forEach((btn) => {
         btn.addEventListener("click", function () {
@@ -95,3 +95,52 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         showView("loginForm");
     });
+
+    // Manejar el inicio de sesión
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        const storedEmail = localStorage.getItem("email");
+        const storedPassword = localStorage.getItem("password");
+
+        if (email === storedEmail && password === storedPassword) {
+            alert("Inicio de sesión exitoso");
+            showView("mainView");
+        } else {
+            alert("Correo o contraseña incorrectos");
+        }
+    });
+
+    // Manejar el registro
+    document.getElementById("registerForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        const nombre = document.getElementById("nombre").value;
+        const apellido = document.getElementById("apellido").value;
+        const email = document.getElementById("register-email").value;
+        const password = document.getElementById("register-password").value;
+        const confirmPassword = document.getElementById("confirm-password").value;
+        const pin = document.getElementById("pin").value;
+
+        if (password !== confirmPassword) {
+            alert("Las contraseñas no coinciden");
+            return;
+        }
+
+        if (pin.length !== 4 || !/^\d+$/.test(pin)) {
+            alert("El PIN debe ser de 4 dígitos numéricos");
+            return;
+        }
+
+        localStorage.setItem("nombre", nombre);
+        localStorage.setItem("apellido", apellido);
+        localStorage.setItem("email", email);
+        localStorage.setItem("password", password);
+        localStorage.setItem("pin", pin);
+
+        alert("Registro exitoso");
+        showView("loginForm");
+    });
+
+    
