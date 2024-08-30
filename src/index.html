@@ -18,3 +18,33 @@
             <p>Vive al máximo</p>
         </div>
     </section>
+
+    <!-- Sección del formulario de inicio de sesión -->
+    <section id="login-form" class="animate__animated animate__fadeIn"style="display:none;">
+        <img src="images/goonogo copia.png" alt="Logo Goonogo" class="logo">
+        <h2>Ingresa a tu cuenta</h2>
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Ingrese su correo" required>
+            <input type="password" id="password" placeholder="Ingrese su contraseña" required>
+            <a href="#" id="forgot-password-link">¿Olvidaste tu contraseña?</a><br><br><br>
+            <button type="submit" class="btn-enviar">Ingresar</button>
+        </form>
+        <p>¿No tienes cuenta?</p> 
+        <a href="#" id="create-account">Crear cuenta</a>
+    </section>
+
+    <!-- Sección del formulario de registro -->
+    <section id="register-form" class="animate__animated animate__fadeIn"style="display:none;">
+        <img src="images/goonogo copia.png" alt="Logo Goonogo" class="logo">
+        <h2>Regístrate</h2>
+        <form id="registerForm">
+            <input type="text" id="nombre" placeholder="Ingrese su nombre" required>
+            <input type="text" id="apellido" placeholder="Ingrese su apellido" required>
+            <input type="email" id="register-email" placeholder="Ingrese su correo" required>
+            <input type="password" id="register-password" placeholder="Ingrese su contraseña" required>
+            <input type="password" id="confirm-password" placeholder="Confirmar contraseña" required>
+            <input type="text" id="pin" placeholder="Ingrese un PIN de 4 dígitos" maxlength="4" pattern="\d{4}" required>
+            <button type="submit" class="btn-enviar">Registrar</button>
+        </form>
+        <p>¿Ya tienes cuenta? <a href="#" id="login-link">Inicia sesión</a></p>
+    </section>
