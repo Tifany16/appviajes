@@ -12,13 +12,13 @@ document.addEventListener("DOMContentLoaded", function () {
         misrutasView: document.getElementById("misrutas-view"),
         passwordRecoveryView: document.getElementById("password-recovery-view"),
     };
-    
+
     // Orden de las vistas principales
     const viewOrder = ["mainView", "main2View"];
     let currentViewIndex = 0;
 
-   // Función para mostrar una vista específica y ocultar las demás
-   function showView(viewToShow) {
+    // Función para mostrar una vista específica y ocultar las demás
+    function showView(viewToShow) {
     Object.values(views).forEach((view) => {
         if (view) {
             view.style.display = "none";
@@ -38,3 +38,32 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateMainView() {
         showView(viewOrder[currentViewIndex]);
     }
+
+    // Manejo de rutas del usuario
+    let userRoute = JSON.parse(localStorage.getItem("userRoute")) || [];
+
+    // Botón "Agregar" en Pueblito Paisa
+    const agregarBtnPueblito = document.getElementById("agregar-btn-pueblito");
+    if (agregarBtnPueblito) {
+        agregarBtnPueblito.addEventListener("click", function () {
+            addToRoute("Pueblito Paisa");
+        });
+    }
+    // Botón "Agregar" en Comuna 13
+    const agregarBtnComuna13 = document.getElementById("agregar-btn-comuna13");
+    if (agregarBtnComuna13) {
+        agregarBtnComuna13.addEventListener("click", function () {
+            addToRoute("Comuna 13");
+        });
+    }
+    
+    // Navegación a la vista de Mis Rutas
+    const misrutasBtn = document.querySelector('nav ul li a[href="#misrutas"]');
+    if (misrutasBtn) {
+        misrutasBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            showView("misrutasView");
+            updateRouteView();
+        });
+    }
+    
