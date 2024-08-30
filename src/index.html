@@ -48,3 +48,60 @@
         </form>
         <p>¿Ya tienes cuenta? <a href="#" id="login-link">Inicia sesión</a></p>
     </section>
+
+    <!-- Sección de olvidaste contraseña-->
+    <section id="password-recovery-view" class="view animate__animated animate__fadeIn" style="display:none;">
+        <img src="images/goonogo copia.png" alt="Logo Goonogo" class="logo">
+        <h2>Recuperar Contraseña</h2>
+        <form id="passwordRecoveryForm">
+            <input type="email" id="recovery-email" placeholder="Ingrese su correo electrónico" required>
+            <input type="text" id="recovery-pin" placeholder="Ingrese su PIN de 4 dígitos" maxlength="4" pattern="\d{4}" required>
+            <input type="password" id="new-password" placeholder="Nueva contraseña" required>
+            <input type="password" id="confirm-new-password" placeholder="Confirmar nueva contraseña" required>
+            <button type="submit" class="btn-enviar">Restablecer Contraseña</button>
+        </form>
+        <p><a href="#" id="back-to-login">Volver al inicio de sesión</a></p>
+    </section>
+
+    <!-- Sección de Pantalla Principal -->
+    <section id="main-view" class="view animate__animated animate__fadeIn" style="display:none;">
+        <nav>
+            <div class="nav-container">
+                <img src="images/goonogo copia.png" alt="Logo Goonogo" class="logo">
+                <ul class="nav-links">
+                    <li><a href="#main" id="lugares-btn">Lugares</a></li>
+                    <li><a href="#misrutas" id="misrutas-btn">Mis rutas</a></li>
+                    <li><a href="#perfil" id="perfil-btn">Perfil</a></li>
+                </ul>
+            </div>
+        </nav>
+        </nav>
+
+        <h1>Medellín</h1>
+        <div class="icon">
+            <img src="images/mapa.png" alt="Icono Ciudad">
+        </div>
+
+        <div class="main-image">
+            <img src="images/pueblitoPaisa-1.jpg" alt="Imagen Principal">
+        </div>
+        
+        <div class="navigation-arrows">
+            <button id="prev-arrow" class="arrow-btn">&larr;</button>
+            <button id="next-arrow" class="arrow-btn">&rarr;</button>
+        </div>
+
+        <div class="description">
+            <h2>Pueblito Paisa</h2>
+            <p>El Pueblito Paisa en Medellín es una réplica encantadora de un típico pueblo antioqueño, ubicado en el Cerro Nutibara. Ofrece vistas panorámicas de la ciudad y una inmersión en la cultura paisa con su arquitectura tradicional y ambiente tranquilo.</p>
+            <div class="location">
+                <img src="images/ubicacion.png" alt="Icono de Ubicación">
+                <span>Cerro Nutibara, Medellín, Antioquia, Colombia.</span>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="button" id="restaurantes-btn">Restaurantes</button>
+            <button class="button" id="agregar-btn-pueblito">Agregar</button>
+        </div>
+    </section>
