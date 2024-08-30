@@ -1,0 +1,24 @@
+$fondo_splash: rgba(0, 0, 0, 0.611);
+$fondo_home: white;
+$fondo_login:white;
+$fondo_perfil: white;
+$fondo_restaurantes: white;
+$fondo_ruta: white;
+$fondo_validacion: white;
+$fondo_general: white;
+$color_principal: #07294d;
+$color_secundario: #ccc;
+$color_texto: white;
+
+body {
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 14px; /* Ajustar tamaño de fuente globalmente */
+}
