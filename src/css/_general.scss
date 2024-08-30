@@ -335,3 +335,67 @@ nav img.logo {
     margin-top: 20px;
     text-align: center;
 }
+
+.ruta-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.imagenes-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.imagen-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.imagen-placeholder p {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.placeholder-content {
+    width: 80%;
+    height: 80%;
+    background-color: #ddd;
+}
+
+.linea-tiempo {
+    position: relative;
+    height: 2px;
+    background-color: #000;
+    margin: 20px 0;
+}
+
+.marcador {
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 5px 0;
+}
+
+.marcador:first-child {
+    left: 0;
+}
+
+.marcador:last-child {
+    right: 0;
+}
+
