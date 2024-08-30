@@ -246,3 +246,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
         popup.style.display = "flex";
     }
+
+    // Función para cerrar la ventana emergente de validación
+    function closeValidationPopup() {
+        const popup = document.getElementById("validacion-popup");
+        popup.style.display = "none";
+    }
+
+    // Event listener para el botón de validar
+    const validarBtn = document.getElementById("validar-btn");
+    if (validarBtn) {
+        validarBtn.addEventListener("click", showValidationPopup);
+    }
+
+    // Event listener para el botón de cerrar la ventana emergente
+    const cerrarPopupBtn = document.getElementById("cerrar-popup");
+    if (cerrarPopupBtn) {
+        cerrarPopupBtn.addEventListener("click", closeValidationPopup);
+    }
+
+    // Event listener para el botón de confirmar validación
+    const confirmarValidacionBtn = document.getElementById("confirmar-validacion");
+    if (confirmarValidacionBtn) {
+        confirmarValidacionBtn.addEventListener("click", function() {
+            alert("¡Felicidades! Has ganado una estrella por completar tu ruta.");
+            closeValidationPopup();
+            showView("misrutasView");
+            updateRouteView();
+        });
+    }
