@@ -100,3 +100,34 @@ a {
       text-decoration: underline;
     }
 }
+
+/* Clases adicionales */
+.ocultar {
+    display: none;
+}
+
+/* Estilos generales para la vista "home" */
+.view {
+    width: 360px;
+    height: 740px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+}
+
+.view.active {
+    display: block;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: $color_texto;
+    padding: 10px 0;
+}
