@@ -160,3 +160,42 @@ document.addEventListener("DOMContentLoaded", function () {
              showView("loginForm");
          });
     }
+
+    // Manejar la recuperación de contraseña
+    const passwordRecoveryForm = document.getElementById("passwordRecoveryForm");
+    if (passwordRecoveryForm) {
+        passwordRecoveryForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const email = document.getElementById("recovery-email").value;
+            const pin = document.getElementById("recovery-pin").value;
+            const newPassword = document.getElementById("new-password").value;
+            const confirmNewPassword = document.getElementById("confirm-new-password").value;
+
+            // Verificar que el email existe
+            const storedEmail = localStorage.getItem("email");
+            if (email !== storedEmail) {
+                alert("El correo electrónico no está registrado.");
+                return;
+            }
+
+            // Verificar que el PIN es correcto
+            const storedPin = localStorage.getItem("pin");
+            if (pin !== storedPin) {
+                alert("El PIN es incorrecto.");
+                return;
+            }
+
+            // Verificar que las nuevas contraseñas coinciden
+            if (newPassword !== confirmNewPassword) {
+                alert("Las nuevas contraseñas no coinciden.");
+                return;
+            }
+
+            // Actualizar la contraseña
+            localStorage.setItem("password", newPassword);
+            alert("Contraseña actualizada con éxito.");
+            showView("loginForm");
+        });
+    }
+
+    
