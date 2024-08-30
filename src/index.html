@@ -105,3 +105,78 @@
             <button class="button" id="agregar-btn-pueblito">Agregar</button>
         </div>
     </section>
+
+    <!-- Sección de Pantalla Principal (Comuna 13) -->
+    <section id="main2-view" class="view animate__animated animate__fadeIn" style="display:none;">
+        <nav>
+            <div class="nav-container">
+                <img src="images/goonogo copia.png" alt="Logo Goonogo" class="logo">
+                <ul class="nav-links">
+                    <li><a href="#main" id="lugares-btn">Lugares</a></li>
+                    <li><a href="#misrutas" id="misrutas-btn">Mis rutas</a></li>
+                    <li><a href="#perfil" id="perfil-btn">Perfil</a></li>
+                </ul>
+            </div>
+        </nav>
+        </nav>
+
+        <h1>Medellín</h1>
+        <div class="icon">
+            <img src="images/mapa.png" alt="Icono Ciudad">
+        </div>
+
+        <div class="main-image">
+            <img src="images/comuna13.png" alt="Imagen Principal">
+        </div>
+
+        <div class="navigation-arrows">
+            <button id="prev-arrow" class="arrow-btn">&larr;</button>
+            <button id="next-arrow" class="arrow-btn">&rarr;</button>
+        </div>
+
+        <div class="description">
+            <h2>Comuna 13</h2>
+            <p>La Comuna 13 de Medellín es famosa por su vibrante arte callejero y su transformación social desde tiempos de conflicto. Es un símbolo de resiliencia y creatividad, ofreciendo coloridos murales y vistas panorámicas de la ciudad ademas refleja la historia y el espíritu innovador.</p>
+            <div class="location">
+                <img src="images/ubicacion.png" alt="Icono de Ubicación">
+                <span>Comuna 13, Medellín, Antioquia, Colombia.</span>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="button" id="restaurantes2-btn">Restaurantes</button>
+            <button class="button" id="agregar-btn-comuna13">Agregar</button>
+        </div>
+    </section>
+
+    <section id="misrutas-view" class="view animate__animated animate__fadeIn" style="display:none;">
+        <nav>
+            <div class="nav-container">
+                <img src="images/goonogo copia.png" alt="Logo Goonogo" class="logo">
+                <ul class="nav-links">
+                    <li><a href="#main" id="lugares-btn">Lugares</a></li>
+                    <li><a href="#misrutas" id="misrutas-btn">Mis rutas</a></li>
+                    <li><a href="#perfil" id="perfil-btn">Perfil</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+        <h2>Mis Rutas</h2>
+        <div class="ruta-horizontal" id="rutas-container">
+            <!-- Las rutas se generarán dinámicamente aquí -->
+        </div>
+
+        <button id="validar-btn" class="validar-btn">Validar</button>
+
+        <!-- Ventana emergente de validación -->
+        <div id="validacion-popup" class="popup">
+            <div class="popup-content">
+                <h3>Validar Ruta</h3>
+                <ul id="validacion-lista">
+                    <!-- La lista de lugares se generará dinámicamente aquí -->
+                </ul>
+                <button id="confirmar-validacion">Confirmar</button>
+                <button id="cerrar-popup">Cerrar</button>
+            </div>
+        </div>
+    </section>
