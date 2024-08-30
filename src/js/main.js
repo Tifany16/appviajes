@@ -275,3 +275,19 @@ document.addEventListener("DOMContentLoaded", function () {
             updateRouteView();
         });
     }
+
+    // Manejo de rutas del usuario
+    function getUserRoute() {
+        const email = localStorage.getItem("currentUser");
+        if (email) {
+            return JSON.parse(localStorage.getItem(`route_${email}`)) || [];
+        }
+        return [];
+    }
+
+    function saveUserRoute(route) {
+        const email = localStorage.getItem("currentUser");
+        if (email) {
+            localStorage.setItem(`route_${email}`, JSON.stringify(route));
+        }
+    }
