@@ -399,3 +399,41 @@ nav img.logo {
     right: 0;
 }
 
+/* Estilos para todos los botones */
+button, .btn-enviar, .validar-btn, #confirmar-validacion, #cerrar-popup, .logout-button {
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 80%;
+    margin: 10px auto;
+    font-size: 16px;
+    background-color: $color_principal;
+    color: $color_texto;
+}
+
+button:hover, .btn-enviar:hover, .validar-btn:hover, #confirmar-validacion:hover, #cerrar-popup:hover, .logout-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Asegúrate de que el contenedor principal tenga suficiente espacio */
+#main-view, #main2-view {
+    padding-bottom: 60px; /* Ajusta según sea necesario */
+    position: relative;
+}
+
+.lugar-ruta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#rutas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
