@@ -198,4 +198,25 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    
+    // Navegación general mediante la barra de navegación
+    const navLinks = document.querySelectorAll("nav ul li a");
+    navLinks.forEach((link) => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            if (targetId === "misrutas") {
+                showView("misrutasView");
+                updateRouteView();
+            } else {
+                showView(targetId + "View");
+            }
+        });
+    });
+
+    // Navegación a la vista de Restaurantes desde Pueblito Paisa
+    const restaurantesButton = document.getElementById("restaurantes-btn");
+    if (restaurantesButton) {
+        restaurantesButton.addEventListener("click", function () {
+            showView("restaurantesView");
+        });
+    }
