@@ -296,3 +296,42 @@ nav img.logo {
       }
     }
 }
+
+.navigation-arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    z-index: 10;
+    padding: 0 25px;
+  
+    margin-top: 5px; /* Añadido para separar las flechas de la imagen */
+}
+
+.arrow-btn:hover {
+    background-color: rgba(219, 219, 219, 0.8);
+}
+
+.arrow-btn {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 40px; /* Aumentado para mejor visibilidad */
+    height: 40px; /* Aumentado para mejor visibilidad */
+    border-radius: 50%;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ruta {
+    margin-top: 20px;
+    text-align: center;
+}
