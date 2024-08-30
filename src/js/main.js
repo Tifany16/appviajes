@@ -320,3 +320,32 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     }
+
+    // Manejar el inicio de sesión
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        const storedEmail = localStorage.getItem("email");
+        const storedPassword = localStorage.getItem("password");
+
+        if (email === storedEmail && password === storedPassword) {
+            localStorage.setItem("currentUser", email);
+            userRoute = getUserRoute(); // Cargar la ruta del usuario actual
+            alert("Inicio de sesión exitoso");
+            showView("mainView");
+        } else {
+            alert("Correo o contraseña incorrectos");
+        }
+    });
+
+    // Cerrar sesión
+    const logoutButton = document.querySelector(".logout-button");
+    if (logoutButton) {
+        logoutButton.addEventListener("click", function () {
+            localStorage.removeItem("currentUser");
+            userRoute = []; // Limpiar la ruta en memoria
+            showView("loginForm");
+        });
+    }
