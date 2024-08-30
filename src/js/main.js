@@ -143,4 +143,20 @@ document.addEventListener("DOMContentLoaded", function () {
         showView("loginForm");
     });
 
-    
+    // Añadir enlace para recuperar contraseña en el formulario de inicio de sesión
+    const forgotPasswordLink = document.getElementById("forgot-password-link");
+    if (forgotPasswordLink) {
+        forgotPasswordLink.addEventListener("click", function(event) {
+            event.preventDefault();
+            showView("passwordRecoveryView");
+        });
+    }
+
+    // Volver al inicio de sesión desde la recuperación de contraseña
+     const backToLoginLink = document.getElementById("back-to-login");
+     if (backToLoginLink) {
+         backToLoginLink.addEventListener("click", function(event) {
+             event.preventDefault();
+             showView("loginForm");
+         });
+    }
