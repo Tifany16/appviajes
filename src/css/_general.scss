@@ -131,3 +131,35 @@ a {
     color: $color_texto;
     padding: 10px 0;
 }
+
+/* Ocultar la página principal cuando no se esté usando */
+.hidden {
+    display: none;
+}
+
+/* Estilos para la descripción */
+  .description {
+    margin: 20px 0;
+}
+
+/* Centrar el logo */
+nav img.logo {
+    height: 15px;
+    width: auto;
+    margin: 0 auto;
+    display: block; /* Asegura que el logo esté centrado */
+    margin-left: 20px;
+}
+
+/* Eliminar margen de la imagen principal */
+.main-image img {
+    width: 100%;
+    max-width: none; /* Asegura que no tenga márgenes ni límites */
+    height: auto;
+    margin-top: 0; /* Eliminar margen superior */
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
