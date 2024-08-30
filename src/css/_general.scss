@@ -256,3 +256,43 @@ nav img.logo {
     margin: 5px 0;
 }
 
+.profile-container {
+    text-align: center; /* Centrar la imagen y el contenido */
+    padding: 20px;
+}
+
+.profile-image {
+    max-width: 100%; /* Asegura que la imagen no sea más grande que su contenedor */
+    width: 50%; /* Ajusta este valor para cambiar el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 50%; /* Añade bordes redondeados, si lo deseas */
+}
+
+.right-button {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+ 
+/* Estilos para la vista de Mis Rutas */
+#misrutas-view {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    .routes-section {
+      padding: 20px;
+      h2 {
+        color: $color_principal;
+      }
+      p {
+        color: $color_secundario;
+      }
+    }
+}
