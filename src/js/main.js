@@ -349,3 +349,19 @@ document.addEventListener("DOMContentLoaded", function () {
             showView("loginForm");
         });
     }
+    // Navegación a la vista de Perfil y mostrar datos del perfil
+    const perfilBtn = document.querySelector('nav ul li a[href="#perfil"]');
+    if (perfilBtn) {
+        perfilBtn.addEventListener("click", function(event) {
+            event.preventDefault();
+            showView("perfilView");
+            // Mostrar datos del perfil
+            document.getElementById("profile-name").textContent = localStorage.getItem("nombre") + " " + localStorage.getItem("apellido");
+            document.getElementById("profile-email").textContent = "Correo: " + localStorage.getItem("email");
+        });
+    }
+    const lugaresImagenes = {
+        "Pueblito Paisa": "images/pueblitoPaisa-1.jpg",
+        "Comuna 13": "images/comuna13.png",
+        // Añade más lugares e imágenes según sea necesario
+    };
