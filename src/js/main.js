@@ -349,6 +349,7 @@ document.addEventListener("DOMContentLoaded", function () {
             showView("loginForm");
         });
     }
+    
     // Navegación a la vista de Perfil y mostrar datos del perfil
     const perfilBtn = document.querySelector('nav ul li a[href="#perfil"]');
     if (perfilBtn) {
@@ -360,8 +361,22 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("profile-email").textContent = "Correo: " + localStorage.getItem("email");
         });
     }
+
     const lugaresImagenes = {
         "Pueblito Paisa": "images/pueblitoPaisa-1.jpg",
         "Comuna 13": "images/comuna13.png",
         // Añade más lugares e imágenes según sea necesario
     };
+
+    // Función para añadir un lugar a la ruta del usuario
+    function addToRoute(lugar) {
+        if (!userRoute.includes(lugar)) {
+            userRoute.push(lugar);
+            saveUserRoute(userRoute);
+            alert(`${lugar} ha sido añadido a tu ruta.`);
+            updateRouteView();
+        } else {
+            alert(`${lugar} ya está en tu ruta.`);
+        }
+    }
+});
