@@ -344,3 +344,29 @@
             </div>
         </div>
     </section>
+
+    <script src="js/main.js"></script>
+
+    <script>
+        // Script para manejar las animaciones
+        function showView(viewToShow) {
+            Object.values(views).forEach((view) => {
+                if (view) {
+                    view.style.display = "none";
+                    view.classList.remove('animate__fadeIn');
+                }
+            });
+            if (views[viewToShow]) {
+                views[viewToShow].style.display = "block";
+                // Forzar un reflow antes de añadir la clase de animación
+                void views[viewToShow].offsetWidth;
+                views[viewToShow].classList.add('animate__fadeIn');
+            }
+            // Asegurarse de que la navegación esté visible en todas las vistas
+            document.querySelectorAll('nav').forEach(nav => {
+                nav.style.display = 'block';
+            });
+        }
+     </script>
+</body>
+</html>
