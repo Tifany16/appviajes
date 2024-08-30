@@ -220,3 +220,29 @@ document.addEventListener("DOMContentLoaded", function () {
             showView("restaurantesView");
         });
     }
+
+    // Navegación a la vista de Restaurantes2 desde Comuna 13
+    const restaurantes2Button = document.getElementById("restaurantes2-btn");
+    if (restaurantes2Button) {
+        restaurantes2Button.addEventListener("click", function () {
+            showView("restaurantes2View");
+        });
+    }
+
+    // Función para mostrar la ventana emergente de validación
+    function showValidationPopup() {
+        const popup = document.getElementById("validacion-popup");
+        const lista = document.getElementById("validacion-lista");
+        lista.innerHTML = "";
+
+        userRoute.forEach(lugar => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+                <span>${lugar}</span>
+                <input type="checkbox" class="lugar-checkbox">
+            `;
+            lista.appendChild(li);
+        });
+
+        popup.style.display = "flex";
+    }
