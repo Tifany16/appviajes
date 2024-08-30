@@ -22,3 +22,26 @@ body {
   font-family: Arial, sans-serif;
   font-size: 14px; /* Ajustar tamaño de fuente globalmente */
 }
+
+/* Estilos generales para las secciones */
+section {
+    width: 360px;
+    height: 740px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos específicos para el splash */
+  #splash {
+    background-color: $fondo_splash;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
