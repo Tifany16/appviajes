@@ -291,3 +291,32 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem(`route_${email}`, JSON.stringify(route));
         }
     }
+
+    // Función para actualizar la vista de la ruta del usuario
+    function updateRouteView() {
+        const rutaContainer = document.getElementById("rutas-container");
+        if (rutaContainer) {
+            rutaContainer.innerHTML = ""; // Limpiar el contenedor
+
+            userRoute.forEach((lugar, index) => {
+                const lugarElement = document.createElement("div");
+                lugarElement.classList.add("lugar-ruta");
+
+                const nombreLugar = document.createElement("p");
+                nombreLugar.textContent = lugar;
+
+                lugarElement.appendChild(nombreLugar);
+                rutaContainer.appendChild(lugarElement);
+
+                // Agregar línea de tiempo si no es el último elemento
+                if (index < userRoute.length - 1) {
+                    const line = document.createElement("div");
+                    line.classList.add("linea-tiempo");
+                    const marker = document.createElement("div");
+                    marker.classList.add("marcador");
+                    line.appendChild(marker);
+                    rutaContainer.appendChild(line);
+                }
+            });
+        }
+    }
