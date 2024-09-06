@@ -96,22 +96,6 @@ document.addEventListener("DOMContentLoaded", function () {
         showView("loginForm");
     });
 
-    // Manejar el inicio de sesión
-    document.getElementById("loginForm").addEventListener("submit", function (event) {
-        event.preventDefault();
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-
-        const storedEmail = localStorage.getItem("email");
-        const storedPassword = localStorage.getItem("password");
-
-        if (email === storedEmail && password === storedPassword) {
-            alert("Inicio de sesión exitoso");
-            showView("mainView");
-        } else {
-            alert("Correo o contraseña incorrectos");
-        }
-    });
 
     // Manejar el registro
     document.getElementById("registerForm").addEventListener("submit", function (event) {

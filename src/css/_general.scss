@@ -1,17 +1,17 @@
 $fondo_splash: rgba(0, 0, 0, 0.611);
 $fondo_home: white;
-$fondo_login:white;
+$fondo_login: white;
 $fondo_perfil: white;
 $fondo_restaurantes: white;
 $fondo_ruta: white;
 $fondo_validacion: white;
 $fondo_general: white;
-$color_principal: #07294d;
-$color_secundario: #ccc;
+$color_principal: #ffa62b;
+$color_secundario: #82c0cc;
 $color_texto: white;
 
 body {
-  background-color: #f4f4f4;
+  background-color: #6d6c6b;
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -20,10 +20,9 @@ body {
   justify-content: center;
   align-items: center;
   font-family: Arial, sans-serif;
-  font-size: 14px; /* Ajustar tamaño de fuente globalmente */
+  font-size: 14px;
 }
 
-/* Estilos generales para las secciones */
 section {
     width: 360px;
     height: 740px;
@@ -32,21 +31,19 @@ section {
     align-items: center;
     flex-direction: column;
     background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(130, 192, 204, 0.1);
     border-radius: 10px;
     text-align: center;
     box-sizing: border-box;
-  }
+}
 
-/* Estilos específicos para el splash */
 #splash {
     background-color: $fondo_splash;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  }
+}
 
- /* Estilos para el texto del splash */
 .splash-text {
      color: #fff;
     text-align: center;
@@ -61,14 +58,12 @@ section {
     }
 }
 
-/* Estilos para logos */
 .logo, .logo-splash {
     width: 150px;
     margin-bottom: 20px;
     margin-top: 60px;
 }
 
-/* Estilos para los formularios */
 form {
     margin-top: 20px;
     display: flex;
@@ -76,23 +71,21 @@ form {
     align-items: center;
 }
 
-/* Estilos para inputs */
 input {
     width: 80%;
     padding: 10px 5px;
     margin: 10px 0;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #82c0cc;
     font-size: 16px;
     &:focus {
-      border-color: $color_principal;
+      border-color: #ffa62b;
       outline: none;
     }
 }
 
-/* Estilos para enlaces */
 a {
-    color: $color_principal;
+    color: #16697a;
     text-decoration: none;
     font-size: 14px;
     margin-top: 10px;
@@ -101,17 +94,15 @@ a {
     }
 }
 
-/* Clases adicionales */
 .ocultar {
     display: none;
 }
 
-/* Estilos generales para la vista "home" */
 .view {
     width: 360px;
     height: 740px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    box-shadow: 0 0 10px rgba(130, 192, 204, 0.1);
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
@@ -122,7 +113,6 @@ a {
     display: block;
 }
 
-/* Estilos para la barra de navegación */
 .navbar {
     display: flex;
     justify-content: space-around;
@@ -132,49 +122,44 @@ a {
     padding: 10px 0;
 }
 
-/* Ocultar la página principal cuando no se esté usando */
 .hidden {
     display: none;
 }
 
-/* Estilos para la descripción */
-  .description {
+.description {
     margin: 20px 0;
+    color: black;
 }
 
-/* Centrar el logo */
 nav img.logo {
-    height: 15px;
+    height: 30px;
     width: auto;
     margin: 0 auto;
-    display: block; /* Asegura que el logo esté centrado */
+    display: block;
     margin-left: 20px;
 }
 
-/* Eliminar margen de la imagen principal */
 .main-image img {
     width: 100%;
-    max-width: none; /* Asegura que no tenga márgenes ni límites */
+    max-width: none;
     height: auto;
-    margin-top: 0; /* Eliminar margen superior */
+    margin-top: 0;
     position: relative;
     height: 200px;
     overflow: hidden;
     object-fit: cover;
 }
 
-/* Estilos para la ubicación */
 .icon img {
-    width: 60px; /* Agrandar un poco más el ícono de ubicación */
+    width: 60px;
     height: auto;
 }
 
-/* Sección de Restaurantes */
 .restaurant-section {
     padding: 20px;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(130, 192, 204, 0.1);
     margin-top: 20px;
     text-align: center;
 }
@@ -186,11 +171,11 @@ nav img.logo {
 }
 
 .restaurant-card {
-    background-color: #f4f4f4;
+    background-color: #ede7e3;
     border-radius: 10px;
     padding: 10px;
     text-align: center;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px rgba(130, 192, 204, 0.1);
 }
 
 .restaurant-card img {
@@ -202,6 +187,7 @@ nav img.logo {
 .restaurant-card h3 {
     font-size: 14px;
     margin-top: 10px;
+    color: black;
 }
 
 .location {
@@ -219,16 +205,15 @@ nav img.logo {
 
 .location p {
     font-size: 12px;
-    color: #555;
+    color: #489fb5;
 }
 
-/* Vista de Perfil */
 #perfil-view {
-    display: none; /* Oculto inicialmente */
+    display: none;
     width: 360px;
     height: 740px;
-    background-color: $fondo_general;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    box-shadow: 0 0 10px rgba(130, 192, 204, 0.1);
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
@@ -238,34 +223,35 @@ nav img.logo {
 #perfil-view h2 {
     font-size: 24px;
     margin: 20px 0;
+    color: black;
 }
 
-/* Estilos para los datos del perfil */
-  .profile-info {
+.profile-info {
     margin: 20px 0;
 }
 
 .profile-info h3 {
     font-size: 18px;
     margin-bottom: 10px;
+    color: black;
 }
 
 .profile-info p {
     font-size: 14px;
-    color: #555;
+    color: #489fb5;
     margin: 5px 0;
 }
 
 .profile-container {
-    text-align: center; /* Centrar la imagen y el contenido */
+    text-align: center;
     padding: 20px;
 }
 
 .profile-image {
-    max-width: 100%; /* Asegura que la imagen no sea más grande que su contenedor */
-    width: 50%; /* Ajusta este valor para cambiar el tamaño de la imagen */
-    height: auto; /* Mantiene la proporción de la imagen */
-    border-radius: 50%; /* Añade bordes redondeados, si lo deseas */
+    max-width: 100%;
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
 }
 
 .right-button {
@@ -274,14 +260,13 @@ nav img.logo {
     right: 10%;
     transform: translateY(-50%);
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #ffa62b;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
  
-/* Estilos para la vista de Mis Rutas */
 #misrutas-view {
     position: relative;
     overflow: hidden;
@@ -289,10 +274,10 @@ nav img.logo {
     .routes-section {
       padding: 20px;
       h2 {
-        color: $color_principal;
+        color: #16697a;
       }
       p {
-        color: $color_secundario;
+        color: #489fb5;
       }
     }
 }
@@ -307,20 +292,19 @@ nav img.logo {
     width: 80%;
     z-index: 10;
     padding: 0 25px;
-  
-    margin-top: 5px; /* Añadido para separar las flechas de la imagen */
+    margin-top: 5px;
 }
 
 .arrow-btn:hover {
-    background-color: rgba(219, 219, 219, 0.8);
+    background-color: rgba(130, 192, 204, 0.8);
 }
 
 .arrow-btn {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(22, 105, 122, 0.5);
     color: white;
     border: none;
-    width: 40px; /* Aumentado para mejor visibilidad */
-    height: 40px; /* Aumentado para mejor visibilidad */
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     font-size: 18px;
     display: flex;
@@ -328,7 +312,7 @@ nav img.logo {
     align-items: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(130, 192, 204, 0.1);
 }
 
 .ruta {
@@ -352,7 +336,7 @@ nav img.logo {
 .imagen-placeholder {
     width: 100px;
     height: 100px;
-    background-color: #f0f0f0;
+    background-color: #ede7e3;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -365,25 +349,26 @@ nav img.logo {
 .imagen-placeholder p {
     margin-top: 5px;
     font-size: 12px;
+    color: black;
 }
 
 .placeholder-content {
     width: 80%;
     height: 80%;
-    background-color: #ddd;
+    background-color: #82c0cc;
 }
 
 .linea-tiempo {
     position: relative;
     height: 2px;
-    background-color: #000;
+    background-color: #82c0cc;
     margin: 20px 0;
 }
 
 .marcador {
     width: 10px;
     height: 10px;
-    background-color: #000;
+    background-color: #82c0cc;
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -399,29 +384,27 @@ nav img.logo {
     right: 0;
 }
 
-/* Estilos para todos los botones */
-button, .btn-enviar, .validar-btn, #confirmar-validacion, #cerrar-popup, .logout-button {
+button, .btn-enviar, .validar-btn, #confirmar-validacion, #cerrar-popup, .logout-button, .buttons .button {
     border: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(130, 192, 204, 0.1);
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     width: 80%;
     margin: 10px auto;
-    font-size: 16px;
-    background-color: $color_principal;
-    color: $color_texto;
+    background-color: #ffa62b;
+    color: white;
+    transition: background-color 0.3s ease;
 }
 
-button:hover, .btn-enviar:hover, .validar-btn:hover, #confirmar-validacion:hover, #cerrar-popup:hover, .logout-button:hover {
-    background-color: #0056b3;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+button:hover, .btn-enviar:hover, .validar-btn:hover, #confirmar-validacion:hover, #cerrar-popup:hover, .logout-button:hover, .buttons .button:hover {
+    background-color: #489fb5;
+    box-shadow: 0 0 10px rgba(130, 192, 204, 0.1);
 }
 
-/* Asegúrate de que el contenedor principal tenga suficiente espacio */
 #main-view, #main2-view {
-    padding-bottom: 60px; /* Ajusta según sea necesario */
+    padding-bottom: 60px;
     position: relative;
 }
 
@@ -438,7 +421,6 @@ button:hover, .btn-enviar:hover, .validar-btn:hover, #confirmar-validacion:hover
     align-items: center;
 }
 
-/* Estilos actualizados para la ventana emergente */
 .popup {
     position: absolute;
     top: 0;
@@ -467,6 +449,7 @@ button:hover, .btn-enviar:hover, .validar-btn:hover, #confirmar-validacion:hover
 .popup-content h3 {
     font-size: 18px;
     margin-bottom: 15px;
+    color: black;
 }
 
 .popup-content ul {
@@ -481,18 +464,18 @@ button:hover, .btn-enviar:hover, .validar-btn:hover, #confirmar-validacion:hover
     align-items: center;
     margin-bottom: 10px;
     font-size: 14px;
+    color: black;
 }
 
 .popup-content li input[type="checkbox"] {
     margin-left: 10px;
 }
 
-/* Ajustes para la barra de navegación */
 nav {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: rgb(0, 0, 0);
+    background-color: #0c3c46;
     padding: 5px 15px;
     height: 50px;
     color: white;
@@ -500,22 +483,20 @@ nav {
     top: 0;
     left: 0;
     height: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(22, 105, 122, 0.1);
 }
   
-/* Separar los botones */
 .buttons .button {
     padding: 10px;
-    margin: 20px 10px; /* Ajustar el margen para mayor separación */
+    margin: 20px 10px;
     font-size: 16px;
     border: none;
-    background-color: $color_principal;
-    color: $color_texto;
+    background-color: #ffa62b;
+    color: white;
     border-radius: 5px;
     cursor: pointer;
 }
 
-/* Estilos para los botones de la página */
 .buttons {
     display: flex;
     justify-content: space-around;
