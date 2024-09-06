@@ -16,9 +16,9 @@ https://www.figma.com/design/OY8kMBRlgzTHOwTPsKVmeu/App-moviles?node-id=0-1&t=Eq
 
 Para probar el proyecto, seguir los siguientes pasos:
 
-Clonar el repositorio
-Ingresar a la carpeta del repositorio clonado
-Instalar las dependencias con el comando npm i
-Ejecutar el proyecto de manera local npm run local
-Para ver el proyecto para producción npm run build
-Ingresar a la url que aparece en la terminal desde el navegador
+1. Clonar el repositorio
+2. Ingresar a la carpeta del repositorio clonado
+3. Instalar las dependencias con el comando npm i
+4. Ejecutar el proyecto de manera local npm run local
+5. Para ver el proyecto para producción npm run build
+6. Ingresar a la url que aparece en la terminal desde el navegador
