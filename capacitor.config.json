@@ -1,6 +1,5 @@
 {
   "appId": "co.edu.upb.goonogo",
   "appName": "goonogo",
-  "webDir": "www.upb.edu.co."
+  "webDir": "dist"
 }
-
